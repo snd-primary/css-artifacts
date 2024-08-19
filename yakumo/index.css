@@ -1,0 +1,212 @@
+:root {
+	--c-green: #268f4b;
+	--c-white: #fefefe;
+	--c-ping: #e9617b;
+	--c-black: #000000;
+	--c-darkPurple: #2e264f;
+
+	--z-negative: -1;
+	--z-neutral: 0;
+	--z-10: 10;
+	--z-20: 10;
+	--z-30: 10;
+	--z-40: 10;
+	--z-50: 10;
+
+	--base-size: 16px;
+	--border-ratio: 0.0625;
+
+	--content-width: 80vmin;
+	--border-width: 2vmin;
+}
+
+body {
+	box-sizing: border-box;
+	font-size: var(--base-size);
+}
+
+main {
+	display: grid;
+	gap: 32px;
+	place-content: center;
+	place-items: center;
+	margin: 12px;
+}
+
+.logoBase {
+	width: var(--content-width);
+	height: 100%;
+	aspect-ratio: 200/157;
+
+	background: #2e264f;
+	border-radius: 11%;
+	position: relative;
+
+	display: grid;
+	grid-template:
+		". ." 19%
+		". ." 5%
+		". ." 32%
+		". ." 1fr / 19% 1fr;
+	justify-content: center;
+	justify-items: end;
+	align-content: flex-start;
+	overflow: hidden;
+}
+
+.LMark {
+	grid-area: 1 / 1 / span 2 / span 1;
+	width: 80%;
+	height: 94%;
+	background-color: var(--c-white);
+	border: 0.4rem solid var(--c-black);
+	border-radius: 12%;
+	z-index: var(--z-20);
+	box-sizing: border-box;
+	margin-top: 8%;
+	display: grid;
+	grid-template-areas:
+		"."
+		". . . . . ."
+		". . . . . ."
+		". . . . . ."
+		". . . . . ."
+		".";
+	grid-template-rows: 0.5vmin 4vmin auto auto 2vmin 0.5vmin;
+	grid-template-columns: 9% 30% 18.5% auto auto 7%;
+}
+.L1 {
+	grid-area: 2 / 3 / span 2 / span 3;
+	width: 100%;
+	height: 100%;
+	border-top-left-radius: 90%;
+	transform: rotate(0deg);
+	border-width: var(--border-width);
+	border-color: var(--c-black);
+	border-left-style: solid;
+	border-top-style: solid;
+	/* margin-left: 1%; */
+
+	overflow: hidden;
+}
+.L2 {
+	grid-area: 3 / 2 / span 2 / span 2;
+	width: 100%;
+	height: 100%;
+	border-color: var(--c-black);
+	border-width: var(--border-width);
+	border-bottom-style: solid;
+	border-right-style: solid;
+	border-bottom-right-radius: 100%;
+	margin-top: 36%;
+
+	overflow: hidden;
+}
+.L3 {
+	grid-area: 5 / 2 / span 1 / span 4;
+	background-color: var(--c-black);
+}
+
+.yakumoText {
+	grid-area: 2 / 1 / span 2 / span 2;
+	width: 100%;
+	background: rgb(145, 255, 0);
+	display: grid;
+	grid-template-areas: ". ya ku mo .";
+	grid-template-columns: 15% 27% 25% 26% 7%;
+	grid-template-rows: 92%;
+	align-content: flex-start;
+	justify-content: flex-start;
+}
+
+.yakumoText > div {
+	width: 100%;
+	height: 100%;
+}
+
+.ya {
+	grid-area: ya;
+	background: #f291ff;
+	display: grid;
+	grid-template-areas:
+		". . . . . . ."
+		". . . . . . ."
+		". . . . . . ."
+		". . . . . . ."
+		". . . . . . ."
+		". . . . . . .";
+	grid-template-columns: 3% 14% 25% 12% 24% 20% auto;
+	grid-template-rows: 8% 11% 22% 12% 8% auto;
+}
+
+.ya-1 {
+	grid-area: 2 / 3 / span 5 / span 1;
+	background-color: aqua;
+	border-width: 1vmin;
+	border-style: solid;
+	border-color: chocolate;
+}
+
+.ya-2 {
+	grid-area: 2 / 4 / span 3 / span 2;
+	background-color: #0400ff;
+	width: 50%;
+	height: 85%;
+	border-width: 1vmin;
+	border-style: solid;
+	border-color: chocolate;
+	margin-right: 0;
+	margin-left: auto;
+	transform: skew(-18deg);
+}
+
+.ku {
+	grid-area: ku;
+	background: #fc1dc4;
+}
+.mo {
+	grid-area: mo;
+	background: #ff043a;
+}
+
+.clouds {
+	grid-area: 4 / 1 / 4 / span 2;
+	width: 100%;
+	background-color: rgb(51, 199, 21);
+}
+
+.traceImage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	opacity: 0.7;
+	filter: hue-rotate(261deg) invert(0);
+	display: grid;
+	place-content: center;
+	place-items: center;
+	width: 100%;
+	height: 100%;
+	grid-template-columns: 1fr;
+	z-index: var(--z-20);
+}
+
+.refImage {
+	width: var(--content-width);
+	display: grid;
+	place-content: center;
+	place-items: center;
+	grid-template-columns: 1fr;
+
+	height: 100%;
+	aspect-ratio: 200/157;
+}
+
+.traceImage > img {
+	width: 100%;
+	height: 100%;
+}
+.refImage > img {
+	width: 100%;
+	height: 100%;
+}
